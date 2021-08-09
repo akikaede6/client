@@ -1,14 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2021-07-28T15:23:13
+# Project created by QtCreator 2021-08-05T17:54:27
 #
 #-------------------------------------------------
 
-QT       += core gui dbus
+QT       += core gui dbus xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = client
+TARGET = se
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -24,12 +24,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11 link_pkgconfig
 
-SOURCES += main.cpp gettext.cpp \
-    gsettings.cpp \
-    table.cpp
-HEADERS += gettext.h \
-    gsettings.h \
-    table.h
+SOURCES += \
+        main.cpp \
+        mainwindow.cpp \
+    dbustrans.cpp
+
+HEADERS += \
+        mainwindow.h \
+    dbustrans.h
+
+FORMS += \
+        mainwindow.ui
 
 PKGCONFIG += gsettings-qt
 
